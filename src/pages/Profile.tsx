@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -37,6 +38,7 @@ const Profile = () => {
   const [isLoadingCVs, setIsLoadingCVs] = useState(true);
   const [showCVDetails, setShowCVDetails] = useState(false);
   const [selectedCV, setSelectedCV] = useState<any>(null);
+  const navigate = useNavigate();
 
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileFormSchema),
@@ -293,7 +295,7 @@ const Profile = () => {
                       variant="outline" 
                       size="sm" 
                       className="mt-2"
-                      onClick={() => window.location.href = '/dashboard'}
+                      onClick={() => navigate('/dashboard')}
                     >
                       Upload Your First CV
                     </Button>
