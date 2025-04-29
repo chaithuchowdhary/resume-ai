@@ -182,7 +182,7 @@ const Profile = () => {
                 <Button variant="ghost" className="justify-start">
                   Profile Information
                 </Button>
-                <Button variant="ghost" className="justify-start" onClick={() => window.location.href = '/dashboard'}>
+                <Button variant="ghost" className="justify-start" onClick={() => navigate('/dashboard')}>
                   CV Management
                 </Button>
               </nav>
@@ -365,7 +365,7 @@ const Profile = () => {
                 </div>
               </div>
               
-              <Button className="w-full mt-4" onClick={() => window.location.href = '/dashboard'}>
+              <Button className="w-full mt-4" onClick={() => navigate('/dashboard')}>
                 Manage in Dashboard
               </Button>
             </div>
