@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -7,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { QrCode, Download, Copy, Share2 } from 'lucide-react';
 import { generateResumeQRCode } from '@/utils/resumeAnalysis';
 import { useToast } from '@/hooks/use-toast';
+import QRCode from 'react-qr-code';
 
 interface QRCodeGeneratorProps {
   resumeData: any;
@@ -132,11 +132,15 @@ const QRCodeGenerator = ({ resumeData }: QRCodeGeneratorProps) => {
         ) : (
           <div className="space-y-4">
             <div className="border-2 border-dashed border-border rounded-lg p-6 flex flex-col items-center">
-              {/* In a real implementation, this would be an actual QR code image */}
-              <div className="w-48 h-48 bg-muted flex items-center justify-center relative">
-                <QrCode className="h-32 w-32 text-primary opacity-90" />
+              <div className="w-48 h-48 bg-white flex items-center justify-center relative">
+                <QRCode
+                  value={qrData.url}
+                  size={192} // 48 * 4 to match the container size
+                  level="H" // High error correction level
+                  className="p-2"
+                />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-background rounded-full p-2">
+                  <div className="bg-background/80 backdrop-blur-sm rounded-full p-2">
                     <span className="text-xl font-bold text-primary">CV</span>
                   </div>
                 </div>
