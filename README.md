@@ -1,120 +1,146 @@
+# 🚀 Resume Job Matching Application
 
-# Resume Job Matching Application
+A smart web application that helps users **manage resumes** and discover **matching job opportunities**. Packed with AI features like resume parsing, job matching, cover letter generation, and skill gap analysis.
 
-This project is a web application that helps users manage their resumes and find matching job opportunities. It provides features like CV uploading, job matching, cover letter generation, and skill gap analysis.
+---
 
-## Features
+## ✨ Features
 
-- **Resume Management**
-  - Upload and store CVs
-  - Parse resume data
-  - Generate QR codes for easy sharing
+### 📄 Resume Management
 
-- **Job Matching**
-  - Automated job matching based on skills and experience
-  - Real-time job listings integration
-  - Detailed job view with match percentage
+* 📤 Upload and store CVs
+* 🧠 Parse resume data
+* 🔗 Generate QR codes for easy sharing
 
-- **AI Features**
-  - Cover letter generation
-  - Skill gap analysis
-  - Resume improvement suggestions
+### 💼 Job Matching
 
-## Tech Stack
+* 🤖 Automated job suggestions based on skills & experience
+* 🔍 Real-time job listings
+* 📊 View detailed match percentage for each job
 
-- **Frontend**
-  - React with TypeScript
-  - Vite for build tooling
-  - Tailwind CSS for styling
-  - shadcn/ui for UI components
-  - Tanstack Query for data fetching
+### 🧠 AI-Powered Tools
 
-- **Backend (Supabase)**
-  - PostgreSQL database
-  - Edge Functions for serverless computing
-  - Storage for file management
-  - Row Level Security for data protection
+* ✍️ AI-generated cover letters
+* 📉 Skill gap analysis
+* 🛠️ Resume improvement suggestions
 
-## Getting Started
+---
 
-1. **Prerequisites**
-   - Node.js (v18 or higher)
-   - npm or yarn
-   - Supabase account
+## 🛠️ Tech Stack
 
-2. **Installation**
-   ```bash
-   # Clone the repository
-   git clone <your-repo-url>
+### 🌐 Frontend
 
-   # Install dependencies
-   npm install
+* ⚛️ React with TypeScript
+* ⚡ Vite for lightning-fast builds
+* 🎨 Tailwind CSS for modern styling
+* 🧱 shadcn/ui for UI components
+* 🔄 Tanstack Query for seamless data fetching
 
-   # Start the development server
-   npm run dev
-   ```
+### 🔙 Backend (Supabase)
 
-3. **Environment Setup**
-   Create a Supabase project and configure the following:
-   - Supabase URL
-   - Supabase Anon Key
-   - OpenAI API Key (for AI features)
+* 🐘 PostgreSQL Database
+* ⚙️ Edge Functions for serverless logic
+* 🗂️ Storage for file management
+* 🔐 Row Level Security (RLS)
 
-4. **Database Setup**
-   The project uses the following main tables:
-   - `user_cvs`: Stores user resume information
-   - `profiles`: User profile data
+---
 
-## Project Structure
+## 🚧 Getting Started
+
+### 📋 Prerequisites
+
+* Node.js (v18 or higher)
+* npm or yarn
+* Supabase account
+
+### 🛠️ Installation
+
+```bash
+# Clone the repository
+git clone <your-repo-url>
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+### 🔧 Environment Setup
+
+Create a Supabase project and configure the following environment variables:
+
+* `SUPABASE_URL`
+* `SUPABASE_ANON_KEY`
+* `OPENAI_API_KEY`
+
+---
+
+## 🗃️ Database Setup
+
+Main tables used:
+
+* `user_cvs` – stores user resumes and extracted data
+* `profiles` – stores user profile details
+
+---
+
+## 📁 Project Structure
 
 ```
 /src
-  /components
-    /resume        # Resume-related components
-    /ui           # Reusable UI components
-  /integrations   # External service integrations
-  /pages         # Application pages
-  /utils         # Utility functions
+  /components       # Reusable and resume-specific UI components
+    /resume
+    /ui
+  /integrations     # API & external service integrations
+  /pages            # Main application routes
+  /utils            # Utility functions and helpers
 /supabase
-  /functions     # Edge Functions
+  /functions        # Supabase Edge Functions
 ```
 
-## Deployment
+---
 
-1. **Frontend Deployment**
-   - The application can be deployed using any static hosting service
-   - Configure environment variables for production
+## 🚀 Deployment
 
-2. **Backend Deployment**
-   - Supabase handles backend deployment automatically
-   - Edge Functions are deployed through Supabase
+### 🌍 Frontend
 
-## API Documentation
+* Deploy to platforms like Vercel, Netlify, or GitHub Pages
+* Configure production env variables
 
-### Edge Functions
-- `fetch-jobs`: Fetches job listings and matches them with resume data
-- `analyze-resume`: Analyzes uploaded resumes for skill extraction
-- `generate-cover-letter`: Generates customized cover letters
+### 🔙 Backend
 
-### Database Schema
+* Managed by Supabase
+* Edge Functions are deployed through the Supabase dashboard
 
-Key tables and their purposes:
-- `user_cvs`: Stores CV files and parsed data
-- `profiles`: User profile information
+---
 
-## Security
+## 🔌 API Documentation
 
-- Row Level Security (RLS) policies ensure users can only access their own data
-- All API keys and secrets are stored securely in Supabase
-- File uploads are validated and secured
+### 🧩 Edge Functions
 
-## Contributing
+* `fetch-jobs` – Pulls and matches job listings with user resumes
+* `analyze-resume` – Extracts skills from uploaded resumes
+* `generate-cover-letter` – Crafts personalized cover letters
 
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
+---
 
-## License
+## 🔐 Security
 
-This project is licensed under the MIT License.
+* ✅ Row Level Security ensures user data is protected
+* 🔑 API keys and secrets are securely stored in Supabase
+* 🧼 File uploads are validated to prevent malicious input
 
+---
+
+## 🤝 Contributing
+
+1. 🍴 Fork the repository
+2. 🌿 Create a new feature branch
+3. 📩 Submit a Pull Request
+
+---
+
+## 📄 License
+
+Licensed under the [MIT License](LICENSE).
