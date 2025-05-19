@@ -143,4 +143,4 @@ Main tables used:
 
 ## 📄 License
 
-Licensed under the [MIT License](LICENSE).
+Licensed under the [GNU License](LICENSE).
